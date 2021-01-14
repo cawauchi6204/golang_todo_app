@@ -18,8 +18,8 @@ func main() {
 
 	/*
 		u := &models.User{}
-		u.Name = "test"
-		u.Email = "test@example.com"
+		u.Name = "test2"
+		u.Email = "test2@example.com"
 		u.Password = "testtest"
 		fmt.Println(u)
 
@@ -43,17 +43,24 @@ func main() {
 	*/
 
 	/*
-		user, _ := models.GetUser(2)
-		user.CreateTodo("second Todo")
+		user, _ := models.GetUser(3)
+		user.CreateTodo("Third Todo")
 	*/
 
+	user2, _ := models.GetUser(3)
+	todos, _ := user2.GetTodosByUser()
+	for _, v := range todos {
+		fmt.Println(v)
+	}
 	/*
 		t, _ := models.GetTodo(1)
 		fmt.Println(t)
 	*/
 
-	todos, _ := models.GetTodos()
-	for _, v := range todos {
-		fmt.Println(v)
-	}
+	/*
+		todos, _ := models.GetTodos()
+		for _, v := range todos {
+			fmt.Println(v)
+		}
+	*/
 }
